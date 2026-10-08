@@ -19,6 +19,15 @@ cd omarchy-terminal-splash
 
 Reboot to see it. `install.sh` and `revert.sh` ask for your sudo password because they change the boot image.
 
+## Follow theme changes automatically (optional)
+
+```bash
+./auto-update.sh        # turn it on
+./auto-update.sh --off  # turn it off
+```
+
+This adds a small Omarchy hook (`~/.config/omarchy/hooks/theme-set.d/terminal-splash`). After that, whenever you switch themes, an Omarchy terminal pops up, asks for your sudo password, and rebuilds the splash in the new colours. The password is asked for in plain sight, the same as running `./install.sh` yourself, and nothing is stored. Leave the folder where it is, since the hook runs `install.sh` from there. It's off unless you turn it on.
+
 ## Go back to the normal splash
 
 ```bash
@@ -32,7 +41,7 @@ If an Omarchy update resets the boot splash, just run `./install.sh` again.
 - Tested on Omarchy with Limine, an encrypted btrfs root and an NVIDIA RTX 4070.
 - On a fast machine the services fly by in a couple of seconds, which is part of the fun.
 - The preview may not open a window under some Wayland setups. That doesn't affect the real boot.
-- Switched themes? Run `./install.sh` again and the splash will match the new one. Colours a theme doesn't define fall back to Osaka Jade's. Needs ImageMagick (`magick`), which Omarchy ships with.
+- Switched themes? Run `./install.sh` again (or turn on `./auto-update.sh`) and the splash will match the new one. Colours a theme doesn't define fall back to Osaka Jade's. Needs ImageMagick (`magick`), which Omarchy ships with.
 
 ## Credits
 
