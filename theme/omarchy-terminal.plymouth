@@ -1,0 +1,11 @@
+[Plymouth Theme]
+Name=Omarchy Terminal
+Description=Omarchy splash with a live boot log, coloured from your current Omarchy theme.
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/omarchy-terminal
+ScriptFile=/usr/share/plymouth/themes/omarchy-terminal/omarchy-terminal.script
+ConsoleLogBackgroundColor=0x@BGHEX@
+MonospaceFont=@FONT@ 12
+Font=@FONT@ 12
